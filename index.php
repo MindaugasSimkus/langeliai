@@ -1,50 +1,53 @@
+<?php 
+  require "functions.php";
+  //include "functions.php";
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>Langeliai
     </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+      .blokas {
+        display: inline-block; 
+        padding: 5px;
+        width: 50px;
+        border: 1px solid white;
+        text-align: center;
+      }
+
+    </style>
   </head>
   <body>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <?php 
-            $langeliu_skaicius = 145;
-            $spalvu_skaicius = "rand";
-            function langeliai($kiekis, $spalvu_pasirinkimas) {
-              if ($kiekis == null) {
-                for ($i=1; $i<=100; $i++) {
-                  if ($spalvu_pasirinkimas == "rand") {
-                    echo "<div style=\"display: inline-block; background-color: rgba(" . rand(0,255) . ", " . rand(0,255) . ", " . rand(0,255) . ", 1); padding: 20px; border: 1px solid white \">". $i . "</div>";
-                  } elseif ($spalvu_pasirinkimas == 2) {
-                    if ($i % 2 == 0) {
-                      echo "<div style=\"display: inline-block; background-color: rgba(41, 125, 56, 1); padding: 20px; border: 1px solid white \">". $i . "</div>";
-                    } else {
-                      echo "<div style=\"display: inline-block; background-color: rgba(141, 8, 9, 1); padding: 20px; border: 1px solid white \">". $i . "</div>";
-                    }
-                  } else {
-                    echo "<div style=\"display: inline-block; background-color: rgba(41, 125, 56, 1); padding: 20px; border: 1px solid white \">". $i . "</div>";
-                  }
-                }
-              } else {
-                  for ($i=1; $i<=$kiekis; $i++) {
-                  if ($spalvu_pasirinkimas == "rand") {
-                    echo "<div style=\"display: inline-block; background-color: rgba(" . rand(0,255) . ", " . rand(0,255) . ", " . rand(0,255) . ", 1); padding: 20px; border: 1px solid white \">". $i . "</div>";
-                  } elseif ($spalvu_pasirinkimas == 2) {
-                    if ($i % 2 == 0) {
-                     echo "<div style=\"display: inline-block; background-color: rgba(41, 125, 56, 1); padding: 20px; border: 1px solid white \">". $i . "</div>";
-                    } else {
-                      echo "<div style=\"display: inline-block; background-color: rgba(141, 8, 9, 1); padding: 20px; border: 1px solid white \">". $i . "</div>";
-                    }
-                  } else {
-                    echo "<div style=\"display: inline-block; background-color: rgba(41, 125, 56, 1); padding: 20px; border: 1px solid white \">". $i . "</div>";
-                  }
-                }
-              }
+          <h1>Kaip jautiesi lauke?</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table">
+            <tr>
+
+
+            <?php 
+            $ilgis = 50;
+            $plotis = 10;
+            $class = "";
+            //for ($gylis=1; $gylis<5; $gylis++) {
+            //echo "Mums reikes " . get_area($ilgis, $plotis, $gylis) . " kv.m. plyteliu. <br/>"; 
+            //}
+
+            echo "<tr><th>Temperatura</th> <th>Jausmas</th></tr>";
+            for ($i=1; $i<=35; $i++) { 
+              echo "<tr class=" . klase(get_feel($i)) . "><td>" . $i . "</td><td>" . get_feel($i) . "</td></tr>"; 
             }
-            langeliai($langeliu_skaicius, $spalvu_skaicius);
-          ?>
+           
+            ?>
+          </table>
         </div>
       </div>
     </div>
