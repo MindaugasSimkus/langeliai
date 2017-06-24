@@ -50,4 +50,8 @@
   }
 
 
+// namu darbai pasidaryt lentele kurioje butu turis baseino perduodant tris parametrus ir kita funkcija kiek mums reikes sunkvezimiu uzpildyt ta baseina perduodant baseino turi ir sunkvezimio talpa 
+  
+
   ?>
+
