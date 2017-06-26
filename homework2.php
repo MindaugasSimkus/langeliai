@@ -35,7 +35,7 @@
             $autocis2 = 400;
             $autocis3 = 1200;
 
-            echo "<tr><th rowspan='3'>Baseino gylis (m)</th> <th rowspan='3'> Baseino tūris (m3)</th><th colspan='6'>Autocisternų kiekis (vnt.)</th></tr><tr><th colspan='2'>250 m3</th><th colspan='2'>400 m3</th><th colspan='2'>1200 m3</th></tr><tr><th>Kiekis</th><th>Kaina</th><th>Kiekis</th><th>Kaina</th><th>Kiekis</th><th>Kaina</th></tr>";
+            echo "<tr><th rowspan='3'>Baseino gylis (m)</th> <th rowspan='3'> Baseino tūris (m<sup>3</sup>)</th><th colspan='6'>Autocisternos</th></tr><tr><th colspan='2'>250 m<sup>3</sup></th><th colspan='2'>400 m<sup>3</sup></th><th colspan='2'>1200 m<sup>3</sup></th></tr><tr><th>Kiekis</th><th>Kaina</th><th>Kiekis</th><th>Kaina</th><th>Kiekis</th><th>Kaina</th></tr>";
 
             for ($gylis=1; $gylis<=30; $gylis++) { 
               $turis =  turis($ilgis, $plotis, $gylis);
