@@ -11,7 +11,6 @@
     <style>
       th, td {
         text-align: center;
-        vertical-align: middle;
       }
       .green {
         background-color: rgba(11, 133, 0, 0.4);
